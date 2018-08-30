@@ -31,7 +31,6 @@ export class TodoComponent implements OnInit {
 
   addNewTodo(form: NgForm)
   {
-
     var form_description = form.value.description;
     var form_priority = form.value.priority
 
@@ -52,8 +51,6 @@ export class TodoComponent implements OnInit {
     console.log("Due Date: ", newTodo.duedate);
 
     this.newTodoitem.next(newTodo);
-
-
   }
 
 }

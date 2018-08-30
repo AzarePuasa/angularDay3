@@ -5,7 +5,7 @@
   "background_color": "#2196f3",
   "display": "standalone",
   "Scope": "/",
-  "start_url": "/angularDay3",
+  "start_url": "/myDay3ToDoApp",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

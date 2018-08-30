@@ -6,6 +6,7 @@ import { MaterialsModule } from './materials/materials.module';
 import { TodoComponent } from './components/todo.component';
 import { FormsModule } from '@angular/forms';
 import { TaskComponent } from './components/task.component';
+import { FlexLayoutModule } from '@angular/flex-layout'
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { TaskComponent } from './components/task.component';
   imports: [
     BrowserModule,
     MaterialsModule,
-    FormsModule
+    FormsModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -2,7 +2,7 @@
     <form #todo="ngForm" (ngSubmit)="addNewTodo(todo)">
         <!--Text Field-->
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Description" name="description" ngModel>
+            <input matInput placeholder="Description" name="description" required ngModel>
         </mat-form-field>
         <br>  
           <!--Radio Button-->
@@ -14,15 +14,16 @@
         <br>  
         <!--Date Field-->
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Due" name="duedata" ngModel>
+            <input matInput [matDatepicker]="datepicker" placeholder="Due Date" ngModel name="duedate">
+            <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+            <mat-datepicker #datepicker></mat-datepicker>
         </mat-form-field>
         <br>
           <!--Submit Button-->
-        <button mat-raised-button color="primary">
+        <button mat-raised-button color="primary" [disabled]="todo.invalid">
             <i class="material-icons">add_circle_outline</i>
             <span>Add</span>
         </button>
-          
     </form>
 </div>
 

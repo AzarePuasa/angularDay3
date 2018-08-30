@@ -1,22 +1,27 @@
 <div>
-    <form>
+    <form #todo="ngForm" (ngSubmit)="addNewTodo(todo)">
+        <!--Text Field-->
         <mat-form-field class="example-full-width">
-            <input matInput placeholder="Description" ngModel>
-          </mat-form-field>
-          <br>  
-          <mat-radio-group labelPosition='before'> Priority:
-              <mat-radio-button value="high" ngModel>High</mat-radio-button>
-              <mat-radio-button value="medium" ngModel>Medium</mat-radio-button>
-              <mat-radio-button value="low" ngModel>Low</mat-radio-button>
-          </mat-radio-group> 
-          <br>  
-          <mat-form-field class="example-full-width">
-              <input matInput placeholder="Due" ngModel>
-          </mat-form-field>
-          <br>
-          <button mat-raised-button color="primary"><i class="material-icons">
-              add_circle_outline
-              </i><span>Add</span></button>
+            <input matInput placeholder="Description" name="description" ngModel>
+        </mat-form-field>
+        <br>  
+          <!--Radio Button-->
+        <mat-radio-group name="priority" labelPosition='before' ngModel> Priority:
+            <mat-radio-button value="high">High</mat-radio-button>
+            <mat-radio-button value="medium">Medium</mat-radio-button>
+            <mat-radio-button value="low">Low</mat-radio-button>
+        </mat-radio-group> 
+        <br>  
+        <!--Date Field-->
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Due" name="duedata" ngModel>
+        </mat-form-field>
+        <br>
+          <!--Submit Button-->
+        <button mat-raised-button color="primary">
+            <i class="material-icons">add_circle_outline</i>
+            <span>Add</span>
+        </button>
           
     </form>
 </div>

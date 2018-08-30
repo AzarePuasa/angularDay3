@@ -1,0 +1,23 @@
+<div>
+    <form>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Description" ngModel>
+          </mat-form-field>
+          <br>  
+          <mat-radio-group labelPosition='before'> Priority:
+              <mat-radio-button value="high" ngModel>High</mat-radio-button>
+              <mat-radio-button value="medium" ngModel>Medium</mat-radio-button>
+              <mat-radio-button value="low" ngModel>Low</mat-radio-button>
+          </mat-radio-group> 
+          <br>  
+          <mat-form-field class="example-full-width">
+              <input matInput placeholder="Due" ngModel>
+          </mat-form-field>
+          <br>
+          <button mat-raised-button color="primary"><i class="material-icons">
+              add_circle_outline
+              </i><span>Add</span></button>
+          
+    </form>
+</div>
+
